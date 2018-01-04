@@ -178,6 +178,9 @@ class ZmitiContentApp extends Component {
 				var mainStyle = {
 					background: this.props.indexBg ? '#fff url(' + this.props.indexBg + ') no-repeat center / cover' : "#fff url(./assets/images/bg.png) no-repeat center center / cover "
 				}
+				var lastStyle = {
+					background: "#fff url(./assets/images/bg-result.png) no-repeat center center / cover "
+				}
 				component = <div className='zmiti-dangjian-content-C lt-full' style={mainStyle} onTouchStart={this.contentTap.bind(this)}>
 				{this.props.needInfo && <section className={'zmiti-dangjian-content-user lt-full '+(this.state.hideUser?'hide':'')} >
 									<div className='zmiti-dangjian-content-cover'>
@@ -253,7 +256,7 @@ class ZmitiContentApp extends Component {
 					})}
 				</section>
 
-				<section className={'zmiti-dangjian-result-page lt-full ' + (this.state.showScore?'active':'') }style={mainStyle}>
+				<section className={'zmiti-dangjian-result-page lt-full ' + (this.state.showScore?'active':'') }style={lastStyle}>
 						<div className='zmiti-dangjian-score-C'>
 							<div className='zmiti-dangjian-score'>
 								{this.state.score}
